@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+.game-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+h2#playerName {
+    margin-bottom: 15px;
+    color: #4CAF50;
+}
+
+input#answer {
+    padding: 10px;
+    width: 80%;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    font-weight: bold;
+}
+
+/* Buton renkleri */
+#submitButton {
+    background-color: #4CAF50; /* Yeşil */
+}
+#submitButton:hover {
+    background-color: #45a049;
+}
+
+#skipButton {
+    background-color: #ff9800; /* Turuncu */
+}
+#skipButton:hover {
+    background-color: #fb8c00;
+}
+
+#nextQuestion {
+    background-color: #2196F3; /* Mavi */
+}
+#nextQuestion:hover {
+    background-color: #1976D2;
+}
+
+#passButton {
+    background-color: #9C27B0; /* Mor */
+}
+#passButton:hover {
+    background-color: #7B1FA2;
+}
+
+#collapseButton {
+    background-color: #FF5722; /* Kırmızı-Turuncu */
+}
+#collapseButton:hover {
+    background-color: #E64A19;
+}
+
+#endButton {
+    background-color: #f44336; /* Kırmızı */
+}
+#endButton:hover {
+    background-color: #d32f2f;
+}
+
+#resultMessage {
+    margin-top: 15px;
+    font-weight: bold;
+    min-height: 40px;
+}
+
+/* Alt bilgi - footer */
+.footer-text {
+    margin-top: 30px;
+    font-size: 13px;
+    color: #666;
+    font-style: italic;
+    user-select: none;
+    text-align: center;
+    width: 100%;
+}

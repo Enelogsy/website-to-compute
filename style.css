@@ -1,133 +1,209 @@
-/* A set of default styles */
-:root {
-  /* Generic sizing for the page */
-  --wrapper-height: 100vh;
-
-  /* Fonts for different elements */
-  --font-family: sans-serif;
-  --font-family-list: monospace;
-
-  /* Colors you'll see cascade through the elements */
-  --color-bg: #99ddff; /* Used for the page body background */
-  --color-bg-alt: #33b1ff; /* Used for social icons on hover */
-  --color-text-main: #004099; /* List text ann social icons on hover */
-  --color-primary: #006aff; /* Headers and borders */
-  --color-highlight: #e7f7fe; /* Highlights */
-}
-
-/* Basic page style resets */
-* {
-  box-sizing: border-box;
-}
-[hidden] {
-  display: none !important;
-}
-
-/* Page structure */
+/* Genel gövde stilleri */
 body {
-  font-family: var(--font-family);
-  background-color: var(--color-bg);
-  text-align: center;
-  margin: 0;
-  font-size:large;
-}
-/* Page structure */
-.wrapper {
-  min-height: var(--wrapper-height);
-  display: grid;
-  place-items: center;
-  margin: 0;
-  padding:1rem 2rem;
-}
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
 }
 
-.illustration {
-  max-width:30%;
-  margin:1rem 0 2rem 0;
-  animation: 1s ease-out 0s 1 spinIn;
-}
-@keyframes spinIn {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.illustration-404 {
-  max-width:30%;
-  margin:1rem 0 2rem 0;
-  animation: 1s ease-out 0s 1 spinUp;
-  filter: grayscale(100%);
-  animation-fill-mode: forwards;
-} 
-@keyframes spinUp {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
+.container {
+    background-color: white;
+    padding: 30px 25px 40px 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    width: 320px;
+    box-sizing: border-box;
 }
 
-/* Typography */
-p {
-  margin: 1rem;
-  line-height: 1.3em;
-}
-p,
-h1,
-h2,
-h3,
-h4,
-h5 {
-  color: var(--color-text-main);
-}
 h1 {
-  display: inline-flex;
-  color: var(--color-primary);
-  justify-content: center;
+    font-size: 30px;
+    margin-bottom: 22px;
+    color: #4CAF50;
+    font-weight: 700;
 }
-/* Link styles */
-a:link,
-a:visited {
-  text-decoration: none;
-  border-bottom: 2px solid var(--color-primary);
-  color: var(--color-primary);
-  transition: background 0.2s linear;
-  font-weight: bold;
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 14px 0 22px 0;
+    border-radius: 6px;
+    border: 1.8px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
 }
-a:hover,
-a:active,
-a:focus {
-  background: var(--color-primary);
-  color:var(--color-highlight);
+
+input[type="text"]:focus {
+    border-color: #4CAF50;
+    outline: none;
 }
-/* Navigation grid */
-.footer {
-  display: flex;
-  justify-content: space-between;
-  margin: 2rem auto 0;
-  padding: 1.5rem 0 0.5rem 0;
-  width: 100%;
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: flex-end;
+
+button {
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #4CAF50;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
 }
-a.remix {
-  background: var(--color-bg-alt);
-  color:var(--color-highlight);
-  border: 2px solid var(--color-highlight);
-  border-radius: 5px;
-  padding:0.5rem;
-  font-weight:bold;
+
+button:hover {
+    background-color: #43a047;
 }
-a.remix:hover {
-  background: var(--color-primary);
-  color:var(--color-highlight);
+
+#startButton {
+    width: 100%;
+}
+
+#errorMessage {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.footer-text {
+    margin-top: 28px;
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Game sayfası container */
+.game-container {
+    background-color: white;
+    padding: 30px 25px 35px 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    width: 420px;
+    max-width: 90vw;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+}
+
+/* Sorular */
+#question {
+    font-weight: 600;
+    font-size: 22px;
+    color: #222;
+    min-height: 60px;
+    margin-bottom: 18px;
+}
+
+/* Cevap input */
+#answer {
+    width: 80%;
+    padding: 12px 10px;
+    border-radius: 8px;
+    border: 1.5px solid #ccc;
+    font-size: 18px;
+    box-sizing: border-box;
+    margin-bottom: 18px;
+    transition: border-color 0.3s ease;
+}
+
+#answer:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Butonlar */
+button {
+    padding: 12px 18px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    margin: 6px 8px 6px 8px;
+    min-width: 110px;
+    transition: background-color 0.25s ease;
+}
+
+#submitButton {
+    background-color: #4CAF50;
+}
+#submitButton:hover {
+    background-color: #43a047;
+}
+
+#skipButton {
+    background-color: #ff9800;
+}
+#skipButton:hover {
+    background-color: #fb8c00;
+}
+
+#nextQuestion {
+    background-color: #2196F3;
+}
+#nextQuestion:hover {
+    background-color: #1976D2;
+}
+
+#collapseButton {
+    background-color: #f57c00;
+}
+#collapseButton:hover {
+    background-color: #ef6c00;
+}
+
+#passButton {
+    background-color: #9c27b0;
+}
+#passButton:hover {
+    background-color: #7b1fa2;
+}
+
+#endButton {
+    background-color: #f44336;
+}
+#endButton:hover {
+    background-color: #d32f2f;
+}
+
+/* Sonuç mesajı */
+#resultMessage {
+    margin-top: 20px;
+    min-height: 48px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* Üst bilgi alanı (kullanıcı adı ve skor) */
+#playerName {
+    font-weight: 700;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#scoreDisplay {
+    font-weight: 600;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 18px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .game-container {
+        width: 90vw;
+        padding: 20px;
+    }
+    #answer {
+        width: 100%;
+    }
+    button {
+        min-width: 100%;
+        margin: 8px 0;
+    }
 }

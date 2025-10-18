@@ -1,14 +1,12 @@
-// Kullanıcı adı formu
+// app.js
 document.getElementById('usernameForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    const usernameInput = document.getElementById('username');
-    const username = usernameInput.value.trim();
-
+    let username = document.getElementById('username').value.trim();
     if (username === "") {
         document.getElementById('errorMessage').style.display = 'block';
     } else {
-        document.getElementById('errorMessage').style.display = 'none';
+        // Kullanıcı adını localStorage'a kaydet ve oyun sayfasına yönlendir
         localStorage.setItem('username', username);
-        window.location.href = "game.html";
+        window.location.href = "game.html";  // Oyun sayfasına yönlendirme
     }
 });
